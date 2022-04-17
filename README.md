@@ -39,7 +39,7 @@ The data is about predicting housing price (**medv**) in  Boston City, with feat
 ## Data Analysis
 - From **VIF score for each feature**, indicates that there is Multicollinearity, because there is a VIF value that ">3".
 
-    ![image](https://user-images.githubusercontent.com/99865400/163710896-f9cb2bf2-e7c7-42cc-bb0f-679212466103.png)
+    ![image](https://user-images.githubusercontent.com/99865400/163719731-2108b148-b782-46e0-88b0-bd9e4a00489f.png)
 
 - From **Heatmap Correlation**, tax & rad features are correlated with each other and have a correlation value >= 0.8, so tax & rad must be dropped before training the model
 
@@ -53,27 +53,27 @@ The data is about predicting housing price (**medv**) in  Boston City, with feat
 
 ![image](https://user-images.githubusercontent.com/99865400/163710251-2d645932-bb9c-47be-9b04-cdf206a004cb.png)
 
-- **Interpret Ridge Regression best model**
-    - Ridge Regression best model ->> **medv = 15.15 + (-0.08 crim) + 0.03 zn + (-0.087 indus) + 1.95 chas + (-1.67 nox) + 4.75 rm + (-0.01 age) + (-1.23 dis) + (-0.73 ptratio) + 0.01 black + (-0.53 istat)**
-    - Sample coefficient interpretation : the addition of 1 point 'rm' by assuming other features are considered fixed, will increase the housing price (medv) by 4.75
-    - 'rm' is a variable that's very influential on housing price because it has the highest coeff value
+- **Interpret Ridge Regression Best Model**
 
 ![image](https://user-images.githubusercontent.com/99865400/163710358-3749c14d-2fd6-4c9c-bb93-d4050f86ca6e.png)
 
-    - R-squared Ridge Regression for training data is 0.65, it means that the ability of the independent variable to explain the dependent variable (medv) is 65% (the model is acceptable because R-squared >60%)
-    
 ![image](https://user-images.githubusercontent.com/99865400/163710671-e891b7e6-a445-4bb1-880e-89410d2e16b9.png)
 
-- **Interpret Lasso best model**
-    - Lasso Best Model ->> **medv = 25.86 + (-0.05 crim) + 0.02 zn + (-0.02 indus) + 2.46 rm + 0.02 age + (-0.55 dis) + (-0.71 ptratio) + 0.01 black + (-0.71 istat)**
-    - Sample coefficient interpretation : the addition of 1 point 'rm' by assuming other features are considered fixed, will increase the housing price (medv) by 2.46
+    - Ridge Regression best model ->> **medv = 15.15 + (-0.08 crim) + 0.03 zn + (-0.087 indus) + 1.95 chas + (-1.67 nox) + 4.75 rm + (-0.01 age) + (-1.23 dis) + (-0.73 ptratio) + 0.01 black + (-0.53 istat)**
+    - Sample coefficient interpretation : the addition of 1 point 'rm' by assuming other features are considered fixed, will increase the housing price (medv) by 4.75
     - 'rm' is a variable that's very influential on housing price because it has the highest coeff value
+    - R-squared Ridge Regression for training data is 0.65, it means that the ability of the independent variable to explain the dependent variable (medv) is 65% (the model is acceptable because R-squared >60%)
+
+- **Interpret Lasso Best Model**
 
 ![image](https://user-images.githubusercontent.com/99865400/163710514-24919f49-ec7c-4238-ba67-a8c17ec97695.png)
 
-    - R-squared Lasso for training data is 0.51, it means that the ability of the independent variable to explain the dependent variable (medv) by 51% (the model is not acceptable because R-squared <60%)
-
 ![image](https://user-images.githubusercontent.com/99865400/163710757-492fc842-a241-472f-aaa6-1d4c772f5008.png)
+
+    - Lasso Best Model ->> **medv = 25.86 + (-0.05 crim) + 0.02 zn + (-0.02 indus) + 2.46 rm + 0.02 age + (-0.55 dis) + (-0.71 ptratio) + 0.01 black + (-0.71 istat)**
+    - Sample coefficient interpretation : the addition of 1 point 'rm' by assuming other features are considered fixed, will increase the housing price (medv) by 2.46
+    - 'rm' is a variable that's very influential on housing price because it has the highest coeff value
+    - R-squared Lasso for training data is 0.51, it means that the ability of the independent variable to explain the dependent variable (medv) by 51% (the model is not acceptable because R-squared <60%)
     
 ## Model Evaluation
 - After selecting the best model using the validation data set, the next step is to check how the model performs on the test data.
