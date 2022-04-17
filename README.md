@@ -59,10 +59,10 @@ The data is about predicting housing price (**medv**) in  Boston City, with feat
 
 ![image](https://user-images.githubusercontent.com/99865400/163710671-e891b7e6-a445-4bb1-880e-89410d2e16b9.png)
 
-    - Ridge Regression best model ->> **medv = 15.15 + (-0.08 crim) + 0.03 zn + (-0.087 indus) + 1.95 chas + (-1.67 nox) + 4.75 rm + (-0.01 age) + (-1.23 dis) + (-0.73 ptratio) + 0.01 black + (-0.53 istat)**
-    - Sample coefficient interpretation : the addition of 1 point 'rm' by assuming other features are considered fixed, will increase the housing price (medv) by 4.75
-    - 'rm' is a variable that's very influential on housing price because it has the highest coeff value
-    - R-squared Ridge Regression for training data is 0.65, it means that the ability of the independent variable to explain the dependent variable (medv) is 65% (the model is acceptable because R-squared >60%)
+   1. Ridge Regression best model ->> **medv = 15.15 + (-0.08 crim) + 0.03 zn + (-0.087 indus) + 1.95 chas + (-1.67 nox) + 4.75 rm + (-0.01 age) + (-1.23 dis) + (-0.73 ptratio) + 0.01 black + (-0.53 istat)**
+   2. Sample coefficient interpretation : the addition of 1 point 'rm' by assuming other features are considered fixed, will increase the housing price (medv) by 4.75
+   3. 'rm' is a variable that's very influential on housing price because it has the highest coeff value
+   4. **R-squared** Ridge Regression for training data is 0.65, it means that the ability of the independent variable to explain the dependent variable (medv) is 65% (**the model is acceptable** because R-squared >60%)
 
 - **Interpret Lasso Best Model**
 
@@ -70,10 +70,10 @@ The data is about predicting housing price (**medv**) in  Boston City, with feat
 
 ![image](https://user-images.githubusercontent.com/99865400/163710757-492fc842-a241-472f-aaa6-1d4c772f5008.png)
 
-    - Lasso Best Model ->> **medv = 25.86 + (-0.05 crim) + 0.02 zn + (-0.02 indus) + 2.46 rm + 0.02 age + (-0.55 dis) + (-0.71 ptratio) + 0.01 black + (-0.71 istat)**
-    - Sample coefficient interpretation : the addition of 1 point 'rm' by assuming other features are considered fixed, will increase the housing price (medv) by 2.46
-    - 'rm' is a variable that's very influential on housing price because it has the highest coeff value
-    - R-squared Lasso for training data is 0.51, it means that the ability of the independent variable to explain the dependent variable (medv) by 51% (the model is not acceptable because R-squared <60%)
+   1. Lasso Best Model ->> **medv = 25.86 + (-0.05 crim) + 0.02 zn + (-0.02 indus) + 2.46 rm + 0.02 age + (-0.55 dis) + (-0.71 ptratio) + 0.01 black + (-0.71 istat)**
+   2. Sample coefficient interpretation : the addition of 1 point 'rm' by assuming other features are considered fixed, will increase the housing price (medv) by 2.46
+   3. 'rm' is a variable that's very influential on housing price because it has the highest coeff value
+   4. **R-squared** Lasso for training data is 0.51, it means that the ability of the independent variable to explain the dependent variable (medv) by 51% (the model is not acceptable because R-squared <60%)
     
 ## Model Evaluation
 - After selecting the best model using the validation data set, the next step is to check how the model performs on the test data.
@@ -85,15 +85,17 @@ The data is about predicting housing price (**medv**) in  Boston City, with feat
     - if the MEA and MAPE values in the test data set are much greater (and ">30%") than the MEA and MAPE values in the train data, then our model is **overfitting**
     - if the MEA and MAPE values in the test and train data sets are not much different and "<30%", then our model is **acceptable**
 
-- **Ridge Regression - Model Evaluation**
+
+
+**1. Ridge Regression - Model Evaluation**
 
 ![image](https://user-images.githubusercontent.com/99865400/163710962-1a4b7894-f5e9-42c5-a444-ef3c8d87e963.png)
 ![image](https://user-images.githubusercontent.com/99865400/163710976-fd9ceb76-56f4-495b-8a9c-af7b9ab6846f.png)
 
-- **LASSO - Model Evaluation**
+**2. LASSO - Model Evaluation**
 
 ![image](https://user-images.githubusercontent.com/99865400/163710968-736d93e7-e4aa-4b3a-a481-f9f61cc4e5d1.png)
 ![image](https://user-images.githubusercontent.com/99865400/163711009-dfe0a385-56a0-4101-84e8-8f8a8004f161.png)
 
 ## CONCLUSION
-Model with the best and most acceptable performance is Ridge Regression with lambda 10. Because R-square is 65%, the model can be said to be acceptable (R-square value ">60%"), besides that the MAPE value is between Training & Testing error not much different and still below 30%.
+**Model with the best and most acceptable performance is Ridge Regression with lambda 10**. Because R-square is 65%, the model can be said to be acceptable (R-square value ">60%"), besides that the MAPE value between Training & Testing error not much different and still below 30%.
