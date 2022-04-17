@@ -3,7 +3,7 @@ Predicting Housing Price using Regularized Regression (Dibimbing-Homework)
 ## The Data 
 The Data can be download here : https://github.com/pararawendy/dibimbing-materials/blob/main/boston.csv
 ## Overview
-The data is about predicting housing price (**medv**) in  Boston city, features:
+The data is about predicting housing price (**medv**) in  Boston city, with features:
 - Criminal rate (**crim**)
 - Residential land zoned proportion (**zn**)
 - Non-retail business acres proportion (**indus**)
