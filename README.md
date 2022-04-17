@@ -45,11 +45,11 @@ The data is about predicting housing price (**medv**) in  Boston City, with feat
 
 ![image](https://user-images.githubusercontent.com/99865400/163710058-25262c84-182b-47de-b158-5e66f69b02bc.png)
 
-- **On the Ridge Regression model (from the validation set), the best lambda is 10**. With RMSE value : 4.87 (smallest value)
+- **On the Ridge Regression model (using validation set), the best lambda is 10**. With RMSE value : 4.87 (smallest value)
 
 ![image](https://user-images.githubusercontent.com/99865400/163710144-97a66e75-1b9c-417f-886d-2e27663842f4.png)
 
-- **On the Lasso model (from the validation set), the best lambda is 1**. With RMSE value : 4.84 (smallest value)
+- **On the Lasso model (using validation set), the best lambda is 1**. With RMSE value : 4.84 (smallest value)
 
 ![image](https://user-images.githubusercontent.com/99865400/163710251-2d645932-bb9c-47be-9b04-cdf206a004cb.png)
 
@@ -76,12 +76,21 @@ The data is about predicting housing price (**medv**) in  Boston City, with feat
 ![image](https://user-images.githubusercontent.com/99865400/163710757-492fc842-a241-472f-aaa6-1d4c772f5008.png)
     
 ## Model Evaluation
-- **Ridge Regression**
+- After selecting the best model using the validation data set, the next step is to check how the model performs on the test data.
+- To do so, calculate these two regression metrics using train & test data set :
+    - Mean Absolute Error (MAE): How far in absolute basis is the model’s prediction  from the actual data on average
+    - Mean Absolute Percentage Error (MAPE) : How far in relative percentage basis is the model’s  prediction relative to the actual data on average
+- After that we can conclude how our model is performing by comparing the MEA and MAPE values from the train & test data sets :
+    - if the MEA and MAPE values in the test and train data sets are both ">30%", then our model is **underfitting**
+    - if the MEA and MAPE values in the test data set are much greater (and ">30%") than the MEA and MAPE values in the train data, then our model is **overfitting**
+    - if the MEA and MAPE values in the test and train data sets are not much different and "<30%", then our model is **acceptable**
+
+- **Ridge Regression - Model Evaluation**
 
 ![image](https://user-images.githubusercontent.com/99865400/163710962-1a4b7894-f5e9-42c5-a444-ef3c8d87e963.png)
 ![image](https://user-images.githubusercontent.com/99865400/163710976-fd9ceb76-56f4-495b-8a9c-af7b9ab6846f.png)
 
-- **LASSO**
+- **LASSO - Model Evaluation**
 
 ![image](https://user-images.githubusercontent.com/99865400/163710968-736d93e7-e4aa-4b3a-a481-f9f61cc4e5d1.png)
 ![image](https://user-images.githubusercontent.com/99865400/163711009-dfe0a385-56a0-4101-84e8-8f8a8004f161.png)
