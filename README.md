@@ -3,7 +3,7 @@ Predicting Housing Price using Regularized Regression (Dibimbing-Homework)
 ## The Data 
 The Data can be download here : https://github.com/pararawendy/dibimbing-materials/blob/main/boston.csv
 ## Overview
-The data is about predicting housing price (**medv**) in  Boston city, with features:
+The data is about predicting housing price (**medv**) in  Boston City, with features:
 - Criminal rate (**crim**)
 - Residential land zoned proportion (**zn**)
 - Non-retail business acres proportion (**indus**)
@@ -60,7 +60,7 @@ The data is about predicting housing price (**medv**) in  Boston city, with feat
 
 ![image](https://user-images.githubusercontent.com/99865400/163710358-3749c14d-2fd6-4c9c-bb93-d4050f86ca6e.png)
 
-    - **R-squared** Ridge Regression for training data is 0.65, it means that the ability of the independent variable to explain the dependent variable (medv) is 65% (the model is **acceptable** because R-squared >60%)
+    - R-squared Ridge Regression for training data is 0.65, it means that the ability of the independent variable to explain the dependent variable (medv) is 65% (the model is acceptable because R-squared >60%)
     
 ![image](https://user-images.githubusercontent.com/99865400/163710671-e891b7e6-a445-4bb1-880e-89410d2e16b9.png)
 
@@ -71,7 +71,7 @@ The data is about predicting housing price (**medv**) in  Boston city, with feat
 
 ![image](https://user-images.githubusercontent.com/99865400/163710514-24919f49-ec7c-4238-ba67-a8c17ec97695.png)
 
-    - **R-squared** Lasso for training data is 0.51, it means that the ability of the independent variable to explain the dependent variable (medv) by 51% (the model is **not acceptable** because R-squared <60%)
+    - R-squared Lasso for training data is 0.51, it means that the ability of the independent variable to explain the dependent variable (medv) by 51% (the model is not acceptable because R-squared <60%)
 
 ![image](https://user-images.githubusercontent.com/99865400/163710757-492fc842-a241-472f-aaa6-1d4c772f5008.png)
     
